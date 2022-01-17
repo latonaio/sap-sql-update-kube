@@ -1,0 +1,11 @@
+no-tests = true
+output = "models"
+wipe = false
+
+[mysql]
+dbname = "sap"
+host = "192.168.128.135"
+pass = "XXXXXXXXXXX"
+port = 30000
+sslmode = "false"
+user = "latona"

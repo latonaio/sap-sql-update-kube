@@ -1,0 +1,83 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: sap-sql-update-kube
+  name: sap-sql-update-kube
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: sap-sql-update-kube
+  template:
+    metadata:
+      labels:
+        run: sap-sql-update-kube
+    spec:
+      hostname: sap-sql-update-kube
+      containers:
+        - name: sap-sql-update-kube
+          image: latonaio/sap-sql-update-kube
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/aion/Data
+            - name: ui
+              mountPath: /var/lib/aion/UI/sap-sql-update-kube/public/
+          env:
+            - name: RMQ_USER
+              value: "guest"
+            - name: RMQ_PASS
+              value: "XXXXXXXX"
+            - name: RMQ_ADDRESS
+              value: "192.168.128.135"
+            - name: RMQ_PORT
+              value: "32094"
+            - name: RMQ_VHOST
+              value: "sap-test"
+            - name: RMQ_QUEUE_FROM
+              value: "sap-sql-update-kube"
+            - name: RMQ_QUEUE_TO
+              value: ""
+            - name: SAP_API_BASE_URL
+              value: "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/"
+            - name: DB_USER
+              value: "latona"
+            - name: DB_NAME
+              value: "sap"
+            - name: DB_PASS
+              value: "XXXXXXXXXXXX"
+            - name: DB_ADDRESS
+              value: "192.168.128.135"
+            - name: DB_PORT
+              value: "30000"
+          resources:
+            limits:
+              cpu: "1"
+              memory: "200Mi"
+            requests:
+              cpu: "0.5"
+              memory: "100Mi"
+      volumes:
+      - name: data
+        hostPath:
+          path: /var/lib/aion/default/Data
+      - name: ui
+        hostPath:
+          path: /var/lib/aion/UI/sap-sql-update-kube/public/
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: sap-sql-update-kube
+  name: sap-sql-update-kube
+spec:
+  selector:
+    run: sap-sql-update-kube
+  type: ClusterIP
+  ports:
+    - name: dummy
+      port: 40101
+      protocol: TCP
+      targetPort: 12345
