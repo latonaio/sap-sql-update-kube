@@ -122,6 +122,13 @@ sap-sql-update-kube には、ソースコードの初期値として、下記の
 * [BillingDocumentItemPartner](https://github.com/latonaio/sap-billing-document-sql/blob/main/sap-billing-document-sql-item-partner-data.sql)
 * [BillingDocumentItemPricingElement](https://github.com/latonaio/sap-billing-document-sql/blob/main/sap-billing-document-sql-item-pricing-element-data.sql)
 
+#### Credit Memo Request ####
+
+* [CreditMemoRequestHeader](https://github.com/latonaio/sap-credit-memo-request-sql/blob/main/sap-credit-memo-request-sql-header-data.sql)
+* [CreditMemoRequestHeaderPartner](https://github.com/latonaio/sap-credit-memo-request-sql/blob/main/sap-credit-memo-request-sql-header-partner-data.sql)
+* [CreditMemoRequestItem](https://github.com/latonaio/sap-credit-memo-request-sql/blob/main/sap-credit-memo-request-sql-item-data.sql)
+* [CreditMemoRequestItemPricingElement](https://github.com/latonaio/sap-credit-memo-request-sql/blob/main/sap-credit-memo-request-sql-item-pricing-element-data.sql)
+
 ### Production Management
 
 #### Bill Of Material ####

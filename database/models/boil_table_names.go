@@ -24,6 +24,10 @@ var TableNames = struct {
 	SapBusinessPartnerSupplierData                        string
 	SapBusinessPartnerSupplierPartnerFunctionData         string
 	SapBusinessPartnerSupplierPurchasingOrganizationData  string
+	SapCreditMemoRequestHeaderData                        string
+	SapCreditMemoRequestHeaderPartnerData                 string
+	SapCreditMemoRequestItemData                          string
+	SapCreditMemoRequestItemPricingElementData            string
 	SapDefectHeaderData                                   string
 	SapEquipmentMasterBusinessPartnerData                 string
 	SapEquipmentMasterEquipmentData                       string
@@ -139,6 +143,10 @@ var TableNames = struct {
 	SapBusinessPartnerSupplierData:                        "sap_business_partner_supplier_data",
 	SapBusinessPartnerSupplierPartnerFunctionData:         "sap_business_partner_supplier_partner_function_data",
 	SapBusinessPartnerSupplierPurchasingOrganizationData:  "sap_business_partner_supplier_purchasing_organization_data",
+	SapCreditMemoRequestHeaderData:                        "sap_credit_memo_request_header_data",
+	SapCreditMemoRequestHeaderPartnerData:                 "sap_credit_memo_request_header_partner_data",
+	SapCreditMemoRequestItemData:                          "sap_credit_memo_request_item_data",
+	SapCreditMemoRequestItemPricingElementData:            "sap_credit_memo_request_item_pricing_element_data",
 	SapDefectHeaderData:                                   "sap_defect_header_data",
 	SapEquipmentMasterBusinessPartnerData:                 "sap_equipment_master_business_partner_data",
 	SapEquipmentMasterEquipmentData:                       "sap_equipment_master_equipment_data",

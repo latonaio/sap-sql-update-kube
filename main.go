@@ -597,6 +597,58 @@ func main() {
 					}
 				}
 			}
+		case "CreditMemoRequestHeader":
+			mas := &[]models.SapCreditMemoRequestHeaderDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "CreditMemoRequestHeaderPartner":
+			mas := &[]models.SapCreditMemoRequestHeaderPartnerDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "CreditMemoRequestItem":
+			mas := &[]models.SapCreditMemoRequestItemDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "CreditMemoRequestItemPricingElement":
+			mas := &[]models.SapCreditMemoRequestItemPricingElementDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
 		case "BusinessPartnerToSupplier":
 			sd := &models.SapBusinessPartnerSupplierDatum{}
 			json.Unmarshal(str, sd)
