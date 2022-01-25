@@ -165,6 +165,7 @@ var SapProductMasterGeneralDatumRels = struct {
 	ProductSapProductMasterQualityData            string
 	ProductSapProductMasterSalesOrganizationData  string
 	ProductSapProductMasterSalesPlantData         string
+	ProductSapProductMasterSalesTaxData           string
 	ProductSapProductMasterWorkSchedulingData     string
 }{
 	ProductSapProductMasterAccountingData:         "ProductSapProductMasterAccountingData",
@@ -175,6 +176,7 @@ var SapProductMasterGeneralDatumRels = struct {
 	ProductSapProductMasterQualityData:            "ProductSapProductMasterQualityData",
 	ProductSapProductMasterSalesOrganizationData:  "ProductSapProductMasterSalesOrganizationData",
 	ProductSapProductMasterSalesPlantData:         "ProductSapProductMasterSalesPlantData",
+	ProductSapProductMasterSalesTaxData:           "ProductSapProductMasterSalesTaxData",
 	ProductSapProductMasterWorkSchedulingData:     "ProductSapProductMasterWorkSchedulingData",
 }
 
@@ -188,6 +190,7 @@ type sapProductMasterGeneralDatumR struct {
 	ProductSapProductMasterQualityData            SapProductMasterQualityDatumSlice            `boil:"ProductSapProductMasterQualityData" json:"ProductSapProductMasterQualityData" toml:"ProductSapProductMasterQualityData" yaml:"ProductSapProductMasterQualityData"`
 	ProductSapProductMasterSalesOrganizationData  SapProductMasterSalesOrganizationDatumSlice  `boil:"ProductSapProductMasterSalesOrganizationData" json:"ProductSapProductMasterSalesOrganizationData" toml:"ProductSapProductMasterSalesOrganizationData" yaml:"ProductSapProductMasterSalesOrganizationData"`
 	ProductSapProductMasterSalesPlantData         SapProductMasterSalesPlantDatumSlice         `boil:"ProductSapProductMasterSalesPlantData" json:"ProductSapProductMasterSalesPlantData" toml:"ProductSapProductMasterSalesPlantData" yaml:"ProductSapProductMasterSalesPlantData"`
+	ProductSapProductMasterSalesTaxData           SapProductMasterSalesTaxDatumSlice           `boil:"ProductSapProductMasterSalesTaxData" json:"ProductSapProductMasterSalesTaxData" toml:"ProductSapProductMasterSalesTaxData" yaml:"ProductSapProductMasterSalesTaxData"`
 	ProductSapProductMasterWorkSchedulingData     SapProductMasterWorkSchedulingDatumSlice     `boil:"ProductSapProductMasterWorkSchedulingData" json:"ProductSapProductMasterWorkSchedulingData" toml:"ProductSapProductMasterWorkSchedulingData" yaml:"ProductSapProductMasterWorkSchedulingData"`
 }
 
@@ -644,6 +647,27 @@ func (o *SapProductMasterGeneralDatum) ProductSapProductMasterSalesPlantData(mod
 
 	if len(queries.GetSelect(query.Query)) == 0 {
 		queries.SetSelect(query.Query, []string{"`sap_product_master_sales_plant_data`.*"})
+	}
+
+	return query
+}
+
+// ProductSapProductMasterSalesTaxData retrieves all the sap_product_master_sales_tax_datum's SapProductMasterSalesTaxData with an executor via Product column.
+func (o *SapProductMasterGeneralDatum) ProductSapProductMasterSalesTaxData(mods ...qm.QueryMod) sapProductMasterSalesTaxDatumQuery {
+	var queryMods []qm.QueryMod
+	if len(mods) != 0 {
+		queryMods = append(queryMods, mods...)
+	}
+
+	queryMods = append(queryMods,
+		qm.Where("`sap_product_master_sales_tax_data`.`Product`=?", o.Product),
+	)
+
+	query := SapProductMasterSalesTaxData(queryMods...)
+	queries.SetFrom(query.Query, "`sap_product_master_sales_tax_data`")
+
+	if len(queries.GetSelect(query.Query)) == 0 {
+		queries.SetSelect(query.Query, []string{"`sap_product_master_sales_tax_data`.*"})
 	}
 
 	return query
@@ -1454,6 +1478,104 @@ func (sapProductMasterGeneralDatumL) LoadProductSapProductMasterSalesPlantData(c
 	return nil
 }
 
+// LoadProductSapProductMasterSalesTaxData allows an eager lookup of values, cached into the
+// loaded structs of the objects. This is for a 1-M or N-M relationship.
+func (sapProductMasterGeneralDatumL) LoadProductSapProductMasterSalesTaxData(ctx context.Context, e boil.ContextExecutor, singular bool, maybeSapProductMasterGeneralDatum interface{}, mods queries.Applicator) error {
+	var slice []*SapProductMasterGeneralDatum
+	var object *SapProductMasterGeneralDatum
+
+	if singular {
+		object = maybeSapProductMasterGeneralDatum.(*SapProductMasterGeneralDatum)
+	} else {
+		slice = *maybeSapProductMasterGeneralDatum.(*[]*SapProductMasterGeneralDatum)
+	}
+
+	args := make([]interface{}, 0, 1)
+	if singular {
+		if object.R == nil {
+			object.R = &sapProductMasterGeneralDatumR{}
+		}
+		args = append(args, object.Product)
+	} else {
+	Outer:
+		for _, obj := range slice {
+			if obj.R == nil {
+				obj.R = &sapProductMasterGeneralDatumR{}
+			}
+
+			for _, a := range args {
+				if a == obj.Product {
+					continue Outer
+				}
+			}
+
+			args = append(args, obj.Product)
+		}
+	}
+
+	if len(args) == 0 {
+		return nil
+	}
+
+	query := NewQuery(
+		qm.From(`sap_product_master_sales_tax_data`),
+		qm.WhereIn(`sap_product_master_sales_tax_data.Product in ?`, args...),
+	)
+	if mods != nil {
+		mods.Apply(query)
+	}
+
+	results, err := query.QueryContext(ctx, e)
+	if err != nil {
+		return errors.Wrap(err, "failed to eager load sap_product_master_sales_tax_data")
+	}
+
+	var resultSlice []*SapProductMasterSalesTaxDatum
+	if err = queries.Bind(results, &resultSlice); err != nil {
+		return errors.Wrap(err, "failed to bind eager loaded slice sap_product_master_sales_tax_data")
+	}
+
+	if err = results.Close(); err != nil {
+		return errors.Wrap(err, "failed to close results in eager load on sap_product_master_sales_tax_data")
+	}
+	if err = results.Err(); err != nil {
+		return errors.Wrap(err, "error occurred during iteration of eager loaded relations for sap_product_master_sales_tax_data")
+	}
+
+	if len(sapProductMasterSalesTaxDatumAfterSelectHooks) != 0 {
+		for _, obj := range resultSlice {
+			if err := obj.doAfterSelectHooks(ctx, e); err != nil {
+				return err
+			}
+		}
+	}
+	if singular {
+		object.R.ProductSapProductMasterSalesTaxData = resultSlice
+		for _, foreign := range resultSlice {
+			if foreign.R == nil {
+				foreign.R = &sapProductMasterSalesTaxDatumR{}
+			}
+			foreign.R.ProductSapProductMasterGeneralDatum = object
+		}
+		return nil
+	}
+
+	for _, foreign := range resultSlice {
+		for _, local := range slice {
+			if local.Product == foreign.Product {
+				local.R.ProductSapProductMasterSalesTaxData = append(local.R.ProductSapProductMasterSalesTaxData, foreign)
+				if foreign.R == nil {
+					foreign.R = &sapProductMasterSalesTaxDatumR{}
+				}
+				foreign.R.ProductSapProductMasterGeneralDatum = local
+				break
+			}
+		}
+	}
+
+	return nil
+}
+
 // LoadProductSapProductMasterWorkSchedulingData allows an eager lookup of values, cached into the
 // loaded structs of the objects. This is for a 1-M or N-M relationship.
 func (sapProductMasterGeneralDatumL) LoadProductSapProductMasterWorkSchedulingData(ctx context.Context, e boil.ContextExecutor, singular bool, maybeSapProductMasterGeneralDatum interface{}, mods queries.Applicator) error {
@@ -1967,6 +2089,59 @@ func (o *SapProductMasterGeneralDatum) AddProductSapProductMasterSalesPlantData(
 	for _, rel := range related {
 		if rel.R == nil {
 			rel.R = &sapProductMasterSalesPlantDatumR{
+				ProductSapProductMasterGeneralDatum: o,
+			}
+		} else {
+			rel.R.ProductSapProductMasterGeneralDatum = o
+		}
+	}
+	return nil
+}
+
+// AddProductSapProductMasterSalesTaxData adds the given related objects to the existing relationships
+// of the sap_product_master_general_datum, optionally inserting them as new records.
+// Appends related to o.R.ProductSapProductMasterSalesTaxData.
+// Sets related.R.ProductSapProductMasterGeneralDatum appropriately.
+func (o *SapProductMasterGeneralDatum) AddProductSapProductMasterSalesTaxData(ctx context.Context, exec boil.ContextExecutor, insert bool, related ...*SapProductMasterSalesTaxDatum) error {
+	var err error
+	for _, rel := range related {
+		if insert {
+			rel.Product = o.Product
+			if err = rel.Insert(ctx, exec, boil.Infer()); err != nil {
+				return errors.Wrap(err, "failed to insert into foreign table")
+			}
+		} else {
+			updateQuery := fmt.Sprintf(
+				"UPDATE `sap_product_master_sales_tax_data` SET %s WHERE %s",
+				strmangle.SetParamNames("`", "`", 0, []string{"Product"}),
+				strmangle.WhereClause("`", "`", 0, sapProductMasterSalesTaxDatumPrimaryKeyColumns),
+			)
+			values := []interface{}{o.Product, rel.Product, rel.Country, rel.TaxCategory}
+
+			if boil.IsDebug(ctx) {
+				writer := boil.DebugWriterFrom(ctx)
+				fmt.Fprintln(writer, updateQuery)
+				fmt.Fprintln(writer, values)
+			}
+			if _, err = exec.ExecContext(ctx, updateQuery, values...); err != nil {
+				return errors.Wrap(err, "failed to update foreign table")
+			}
+
+			rel.Product = o.Product
+		}
+	}
+
+	if o.R == nil {
+		o.R = &sapProductMasterGeneralDatumR{
+			ProductSapProductMasterSalesTaxData: related,
+		}
+	} else {
+		o.R.ProductSapProductMasterSalesTaxData = append(o.R.ProductSapProductMasterSalesTaxData, related...)
+	}
+
+	for _, rel := range related {
+		if rel.R == nil {
+			rel.R = &sapProductMasterSalesTaxDatumR{
 				ProductSapProductMasterGeneralDatum: o,
 			}
 		} else {

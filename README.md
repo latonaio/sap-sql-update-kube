@@ -55,6 +55,7 @@ sap-sql-update-kube には、ソースコードの初期値として、下記の
 * [ProductMasterProcurement](https://github.com/latonaio/sap-product-master-sql/blob/main/sap_product_master_sql_procurement_data.sql)
 * [ProductMasterAccounting](https://github.com/latonaio/sap-product-master-sql/blob/main/sap_product_master_sql_accounting_data.sql)
 * [ProductMasterSalesOrganization](https://github.com/latonaio/sap-product-master-sql/blob/main/sap_product_master_sql_sales_organization_data.sql)
+* [ProductMasterSalesTax](https://github.com/latonaio/sap-product-master-sql/blob/main/sap_product_master_sql_sales_tax_data.sql)
 * [ProductMasterWorkScheduling](https://github.com/latonaio/sap-product-master-sql/blob/main/sap_product_master_sql_work_scheduling_data.sql)
 * [ProductMasterQuality](https://github.com/latonaio/sap-product-master-sql/blob/main/sap_product_master_sql_quality_data.sql)
 * [ProductMasterProductDesc](https://github.com/latonaio/sap-product-master-sql/blob/main/sap_product_master_sql_product_description_data.sql)
@@ -64,6 +65,10 @@ sap-sql-update-kube には、ソースコードの初期値として、下記の
 * [BatchMasterRecord](https://github.com/latonaio/sap-batch-master-record-sql/blob/main/sap-batch-master-record.sql)
 
 ### Inventory Management
+
+#### Material Stock ####
+
+* [MaterialStock](https://github.com/latonaio/sap-material-stock-sql/blob/main/sap-material-stock-sql.sql)
 
 #### Reservation Document ####
 
@@ -82,7 +87,7 @@ sap-sql-update-kube には、ソースコードの初期値として、下記の
 * [MaterialDocumentHeader](https://github.com/latonaio/sap-material-document-sql/blob/main/sap-material-document-sql-header-data.sql)
 * [MaterialDocumentItem](https://github.com/latonaio/sap-material-document-sql/blob/main/sap-material-document-sql-item-data.sql)
 
-### Sales Management
+### Sales Management ###
 
 #### Customer Master ####
 

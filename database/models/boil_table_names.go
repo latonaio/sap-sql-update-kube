@@ -58,6 +58,7 @@ var TableNames = struct {
 	SapMaintenanceTaskListStrategyPackageData             string
 	SapMaterialDocumentHeaderData                         string
 	SapMaterialDocumentItemData                           string
+	SapMaterialStockData                                  string
 	SapOutboundDeliveryHeaderData                         string
 	SapOutboundDeliveryHeaderPartnerData                  string
 	SapOutboundDeliveryItemData                           string
@@ -72,6 +73,7 @@ var TableNames = struct {
 	SapProductMasterQualityData                           string
 	SapProductMasterSalesOrganizationData                 string
 	SapProductMasterSalesPlantData                        string
+	SapProductMasterSalesTaxData                          string
 	SapProductMasterWorkSchedulingData                    string
 	SapProductionOrderComponentData                       string
 	SapProductionOrderConfirmationBatchCharacteristicData string
@@ -177,6 +179,7 @@ var TableNames = struct {
 	SapMaintenanceTaskListStrategyPackageData:             "sap_maintenance_task_list_strategy_package_data",
 	SapMaterialDocumentHeaderData:                         "sap_material_document_header_data",
 	SapMaterialDocumentItemData:                           "sap_material_document_item_data",
+	SapMaterialStockData:                                  "sap_material_stock_data",
 	SapOutboundDeliveryHeaderData:                         "sap_outbound_delivery_header_data",
 	SapOutboundDeliveryHeaderPartnerData:                  "sap_outbound_delivery_header_partner_data",
 	SapOutboundDeliveryItemData:                           "sap_outbound_delivery_item_data",
@@ -191,6 +194,7 @@ var TableNames = struct {
 	SapProductMasterQualityData:                           "sap_product_master_quality_data",
 	SapProductMasterSalesOrganizationData:                 "sap_product_master_sales_organization_data",
 	SapProductMasterSalesPlantData:                        "sap_product_master_sales_plant_data",
+	SapProductMasterSalesTaxData:                          "sap_product_master_sales_tax_data",
 	SapProductMasterWorkSchedulingData:                    "sap_product_master_work_scheduling_data",
 	SapProductionOrderComponentData:                       "sap_production_order_component_data",
 	SapProductionOrderConfirmationBatchCharacteristicData: "sap_production_order_confirmation_batch_characteristic_data",

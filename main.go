@@ -211,6 +211,19 @@ func main() {
 					}
 				}
 			}
+		case "ProductMasterSalesTax":
+			pds := &[]models.SapProductMasterSalesTaxDatum{}
+			json.Unmarshal(str, pds)
+			for _, pd := range *pds {
+				err = pd.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = pd.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
 		case "ProductMasterProductDescription":
 			pds := &[]models.SapProductMasterProductDescriptionDatum{}
 			json.Unmarshal(str, pds)
@@ -226,6 +239,19 @@ func main() {
 			}
 		case "Batch":
 			mas := &[]models.SapBatchMasterRecord{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "MaterialStock":
+			mas := &[]models.SapMaterialStockDatum{}
 			json.Unmarshal(str, mas)
 			for _, ma := range *mas {
 				err = ma.Insert(ctx, db, boil.Infer())
