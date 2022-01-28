@@ -32,6 +32,11 @@ model_generate.sh の 対象データベース接続時の情報は、/database/
 
 sap-sql-update-kube には、ソースコードの初期値として、下記のSAP SQL テーブルを対象として生成されたソースコード群が、/database/models/ 内に含まれています。  
 
+## SQLBoiler のバージョン
+本レポジトリは、[SQLBoiler]((https://github.com/volatiletech/sqlboiler)) 4.8.4 のバージョンを使用しています。  
+model_generate.sh のコマンドで、/database/models/ 内のソースコードを生成すると、当該ソースコード内の SQLBoiler のバージョンが最新になるのでご注意ください。      
+バージョンを最新にした際は、併せて go modのバージョンを更新し、go mod tidy を行なってください。  
+
 ## 対象とする SAP SQL テーブル
 本レポジトリには、以下の SAP SQLテーブル のレコードの登録・更新機能が含まれます。  
 
@@ -96,6 +101,24 @@ sap-sql-update-kube には、ソースコードの初期値として、下記の
 * [BusinessPartnerCustomerSalesArea](https://github.com/latonaio/sap-business-partner-sql/blob/main/sap-business-partner-sql-customer-sales-area-data.sql)
 * [BusinessPartnerCustomerCompany](https://github.com/latonaio/sap-business-partner-sql/blob/main/sap-business-partner-sql-customer-company-data.sql)
 
+#### Sales Pricing ####
+
+* [SalesPricingConditionValidity](https://github.com/latonaio/sap-sales-pricing-sql/blob/main/sap-sales-pricing-sql-condition-validity-data.sql)
+* [SalesPricingConditionRecord](https://github.com/latonaio/sap-sales-pricing-sql/blob/main/sap-sales-pricing-sql-condition-record-data.sql)
+
+#### Sales Inquiry ####
+
+* [SalesInquiryHeader](https://github.com/latonaio/sap-sales-inquiry-sql/blob/main/sap-sales-inquiry-sql-header-data.sql)
+* [SalesInquiryHeaderPartner](https://github.com/latonaio/sap-sales-inquiry-sql/blob/main/sap-sales-inquiry-sql-header-partner-data.sql)
+* [SalesInquiryItem](https://github.com/latonaio/sap-sales-inquiry-sql/blob/main/sap-sales-inquiry-sql-item-data.sql)
+* [SalesInquiryItemPricingElement](https://github.com/latonaio/sap-sales-inquiry-sql/blob/main/sap-sales-inquiry-sql-item-pricing-element-data.sql)
+
+#### Sales Quotation ####
+* [SalesQuotationHeader](https://github.com/latonaio/sap-sales-quotation-sql/blob/main/sap-sales-quotation-sql-header-data.sql)  
+* [SalesQuotationHeaderPartner](https://github.com/latonaio/sap-sales-quotation-sql/blob/main/sap-sales-quotation-sql-header-partner-data.sql)
+* [SalesQuotationItem](https://https://github.com/latonaio/sap-sales-quotation-sql/blob/main/sap-sales-quotation-sql-item-data.sql)  
+* [SalesQuotationItemPricingElement](https://github.com/latonaio/sap-sales-quotation-sql/blob/main/sap-sales-quotation-sql-item-pricing-element-data.sql)  
+
 #### Sales Order ####
 
 * [SalesOrderHeader](https://github.com/latonaio/sap-sales-order-sql/blob/main/sap-sales-order-sql-header-data.sql)
@@ -111,6 +134,14 @@ sap-sql-update-kube には、ソースコードの初期値として、下記の
 * [SalesContractItem](https://github.com/latonaio/sap-sales-contract-sql/blob/main/sap-sales-contract-sql-item-data.sql)
 * [SalesContractItemPricingElement](https://github.com/latonaio/sap-sales-contract-sql/blob/main/sap-sales-contract-sql-item-pricing-element-data.sql)
 
+#### Sales Scheduling Agreement ####
+* [SalesSchedulingAgreementHeader](https://github.com/latonaio/sap-sales-scheduling-agreement-sql/blob/main/sap-sales-scheduling-agreement-sql-header-data.sql)　　
+* [SalesSchedulingAgreementItem](https://github.com/latonaio/sap-sales-scheduling-agreement-sql/blob/main/sap-sales-scheduling-agreement-sql-item-data.sql)　　　　
+* [SalesSchedulingAgreementItemDeliverySchedule](https://github.com/latonaio/sap-sales-scheduling-agreement-sql/blob/main/sap-sales-scheduling-agreement-sql-item-delivery-schedule-data.sql)　　　　
+* [SalesSchedulingAgreementItemPricingElement](https://github.com/latonaio/sap-sales-scheduling-agreement-sql/blob/main/sap-sales-scheduling-agreement-sql-item-pricing-element-data.sql)　　　　
+* [SalesSchedulingAgreementItemScheduleLine](https://github.com/latonaio/sap-sales-scheduling-agreement-sql/blob/main/sap-sales-scheduling-agreement-sql-item-schedule-line-data.sql)　　　　
+* [SalesSchedulingAgreementPartner](https://github.com/latonaio/sap-sales-scheduling-agreement-sql/blob/main/sap-sales-scheduling-agreement-sql-partner-data.sql)　　　　
+
 #### Outbound Delivery ####
 
 * [OutboundDeliveryHeader](https://github.com/latonaio/sap-outbound-delivery-sql/blob/main/sap-outbound-delivery-sql-header-data.sql)
@@ -118,6 +149,15 @@ sap-sql-update-kube には、ソースコードの初期値として、下記の
 * [OutboundDeliveryPartnerAddress](https://github.com/latonaio/sap-outbound-delivery-sql/blob/main/sap-outbound-delivery-sql-partner-address-data.sql)
 * [OutboundDeliveryItem](https://github.com/latonaio/sap-outbound-delivery-sql/blob/main/sap-outbound-delivery-sql-item-data.sql)
 * [OutboundDeliveryItemDocumentFlow](https://github.com/latonaio/sap-outbound-delivery-sql/blob/main/sap-outbound-delivery-sql-item-document-flow-data.sql)
+
+#### Customer Return ####
+
+* [CustomerReturnHeader](https://github.com/latonaio/sap-customer-return-sql/blob/main/sap-customer-return-sql-header-data.sql)  
+* [CustomerReturnHeaderPartner](https://github.com/latonaio/sap-customer-return-sql/blob/main/sap-customer-return-sql-header-partner-data.sql)  
+* [CustomerReturnItem](https://github.com/latonaio/sap-customer-return-sql/blob/main/sap-customer-return-sql-item-data.sql)  
+* [CustomerReturnItemPricingElement](https://github.com/latonaio/sap-customer-return-sql/blob/main/sap-customer-return-sql-item-pricing-element-data.sql)  
+* [CustomerReturnItemProcessStep](https://github.com/latonaio/sap-customer-return-sql/blob/main/sap-customer-return-sql-item-process-step-data.sql)  
+* [CustomerReturnItemScheduleData](https://github.com/latonaio/sap-customer-return-sql/blob/main/sap-customer-return-sql-item-schedule-line-data.sql)
 
 #### Billing Document ####
 
@@ -162,6 +202,13 @@ sap-sql-update-kube には、ソースコードの初期値として、下記の
 * [ProductionOrderConfirmationMaterialMovements](https://github.com/latonaio/sap-production-order-confirmation-sql/blob/main/sap-production-order-confirmation-sql-material-movements-data.sql)
 * [ProductionOrderConfirmationBatchCharacteristic](https://github.com/latonaio/sap-production-order-confirmation-sql/blob/main/sap-production-order-confirmation-sql-batch-characteristic-data.sql)
 
+### Process Management
+
+#### Process Order Confirmation ####
+
+* [ProcessOrderConfirmationConfirmation](https://github.com/latonaio/sap-process-order-confirmation-sql/blob/main/sap-process-order-confirmation-sql-confirmation-data.sql)
+* [ProcessOrderConfirmationMaterialMovements](https://github.com/latonaio/sap-process-order-confirmation-sql/blob/main/sap-process-order-confirmation-sql-material-movements-data.sql)
+* [ProcessOrderConfirmationBatchCharacteristic](https://github.com/latonaio/sap-process-order-confirmation-sql/blob/main/sap-process-order-confirmation-sql-batch-characteristics-data.sql)
 ### Procurement Management
 
 #### Supplier Master ####
@@ -170,6 +217,10 @@ sap-sql-update-kube には、ソースコードの初期値として、下記の
 * [BusinessPartnerSupplierPartnerFunction](https://github.com/latonaio/sap-business-partner-sql/blob/main/sap-business-partner-sql-supplier-partner-function-data.sql)
 * [BusinessPartnerSupplierCompany](https://github.com/latonaio/sap-business-partner-sql/blob/main/sap-business-partner-sql-supplier-company-data.sql)
 * [BusinessPartnerSupplierPurchasingOrganization](https://github.com/latonaio/sap-business-partner-sql/blob/main/sap-business-partner-sql-supplier-purchasing-organization-data.sql)
+
+#### Purchasing Source List #### 
+
+* [PurchasingSourceList](https://github.com/latonaio/sap-purchasing-source-list-sql/blob/main/sap-purchasing-source-list.sql)
 
 #### Purchase Requisition ####
 
