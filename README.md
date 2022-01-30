@@ -114,6 +114,7 @@ model_generate.sh のコマンドで、/database/models/ 内のソースコー�
 * [SalesInquiryItemPricingElement](https://github.com/latonaio/sap-sales-inquiry-sql/blob/main/sap-sales-inquiry-sql-item-pricing-element-data.sql)
 
 #### Sales Quotation ####
+
 * [SalesQuotationHeader](https://github.com/latonaio/sap-sales-quotation-sql/blob/main/sap-sales-quotation-sql-header-data.sql)  
 * [SalesQuotationHeaderPartner](https://github.com/latonaio/sap-sales-quotation-sql/blob/main/sap-sales-quotation-sql-header-partner-data.sql)
 * [SalesQuotationItem](https://https://github.com/latonaio/sap-sales-quotation-sql/blob/main/sap-sales-quotation-sql-item-data.sql)  
@@ -135,12 +136,19 @@ model_generate.sh のコマンドで、/database/models/ 内のソースコー�
 * [SalesContractItemPricingElement](https://github.com/latonaio/sap-sales-contract-sql/blob/main/sap-sales-contract-sql-item-pricing-element-data.sql)
 
 #### Sales Scheduling Agreement ####
+
 * [SalesSchedulingAgreementHeader](https://github.com/latonaio/sap-sales-scheduling-agreement-sql/blob/main/sap-sales-scheduling-agreement-sql-header-data.sql)　　
+* [SalesSchedulingAgreementPartner](https://github.com/latonaio/sap-sales-scheduling-agreement-sql/blob/main/sap-sales-scheduling-agreement-sql-partner-data.sql)　　
 * [SalesSchedulingAgreementItem](https://github.com/latonaio/sap-sales-scheduling-agreement-sql/blob/main/sap-sales-scheduling-agreement-sql-item-data.sql)　　　　
 * [SalesSchedulingAgreementItemDeliverySchedule](https://github.com/latonaio/sap-sales-scheduling-agreement-sql/blob/main/sap-sales-scheduling-agreement-sql-item-delivery-schedule-data.sql)　　　　
-* [SalesSchedulingAgreementItemPricingElement](https://github.com/latonaio/sap-sales-scheduling-agreement-sql/blob/main/sap-sales-scheduling-agreement-sql-item-pricing-element-data.sql)　　　　
-* [SalesSchedulingAgreementItemScheduleLine](https://github.com/latonaio/sap-sales-scheduling-agreement-sql/blob/main/sap-sales-scheduling-agreement-sql-item-schedule-line-data.sql)　　　　
-* [SalesSchedulingAgreementPartner](https://github.com/latonaio/sap-sales-scheduling-agreement-sql/blob/main/sap-sales-scheduling-agreement-sql-partner-data.sql)　　　　
+* [SalesSchedulingAgreementItemPricingElement](https://github.com/latonaio/sap-sales-scheduling-agreement-sql/blob/main/sap-sales-scheduling-agreement-sql-item-pricing-element-data.sql)  　　　
+* [SalesSchedulingAgreementItemScheduleLine](https://github.com/latonaio/sap-sales-scheduling-agreement-sql/blob/main/sap-sales-scheduling-agreement-sql-item-schedule-line-data.sql)  　　
+
+#### Supplier Invoice ####
+* [SupplierInvoiceHeader](https://github.com/latonaio/sap-supplier-invoice-sql/blob/main/sap-supplier-invoice-sql-header-data.sql)  
+* [SupplierInvoiceTax](https://github.com/latonaio/sap-supplier-invoice-sql/blob/main/sap-supplier-invoice-sql-tax-data.sql)  
+* [SupplierInvoiceAccountAssignment](https://github.com/latonaio/sap-supplier-invoice-sql/blob/main/sap-supplier-invoice-sql-account-assignment-data.sql)  
+* [SupplierInvoicePurchaeseOrderReference](https://github.com/latonaio/sap-supplier-invoice-sql/blob/main/sap-supplier-invoice-sql-purchaese-order-reference-data.sql)
 
 #### Outbound Delivery ####
 

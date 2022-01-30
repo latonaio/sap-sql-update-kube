@@ -623,84 +623,84 @@ func main() {
 					}
 				}
 			}
-		// case "SalesSchedulingAgreementHeader":
-		// 	mas := &[]models.SapSalesSchedulingAgreementHeaderDatum{}
-		// 	json.Unmarshal(str, mas)
-		// 	for _, ma := range *mas {
-		// 		err = ma.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = ma.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
-		// case "SalesSchedulingAgreementHeaderPartner":
-		// 	mas := &[]models.SapSalesSchedulingAgreementHeaderPartnerDatum{}
-		// 	json.Unmarshal(str, mas)
-		// 	for _, ma := range *mas {
-		// 		err = ma.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = ma.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
-		// case "SalesSchedulingAgreementItem":
-		// 	mas := &[]models.SapSalesSchedulingAgreementItemDatum{}
-		// 	json.Unmarshal(str, mas)
-		// 	for _, ma := range *mas {
-		// 		err = ma.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = ma.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
-		// case "SalesSchedulingAgreementItemDeliverySchedule":
-		// 	mas := &[]models.SapSalesSchedulingAgreementItemDeliveryScheduleDatum{}
-		// 	json.Unmarshal(str, mas)
-		// 	for _, ma := range *mas {
-		// 		err = ma.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = ma.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
-		// case "SalesSchedulingAgreementItemScheduleLine":
-		// 	mas := &[]models.SapSalesSchedulingAgreementItemScheduleLineDatum{}
-		// 	json.Unmarshal(str, mas)
-		// 	for _, ma := range *mas {
-		// 		err = ma.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = ma.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
-		// case "SalesSchedulingAgreementItemPricingElement":
-		// 	mas := &[]models.SapSalesSchedulingAgreementItemPricingElementDatum{}
-		// 	json.Unmarshal(str, mas)
-		// 	for _, ma := range *mas {
-		// 		err = ma.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = ma.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
+		case "SalesSchedulingAgreementHeader":
+			mas := &[]models.SapSalesSchedulingAgreementHeaderDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "SalesSchedulingAgreementPartner":
+			mas := &[]models.SapSalesSchedulingAgreementPartnerDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "SalesSchedulingAgreementItem":
+			mas := &[]models.SapSalesSchedulingAgreementItemDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "SalesSchedulingAgreementItemDeliverySchedule":
+			mas := &[]models.SapSalesSchedulingAgreementItemDeliveryScheduleDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "SalesSchedulingAgreementItemScheduleLine":
+			mas := &[]models.SapSalesSchedulingAgreementItemScheduleLineDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "SalesSchedulingAgreementItemPricingElement":
+			mas := &[]models.SapSalesSchedulingAgreementItemPricingElementDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
 		case "OutboundDeliveryHeader":
 			mas := &[]models.SapOutboundDeliveryHeaderDatum{}
 			json.Unmarshal(str, mas)
@@ -1022,45 +1022,19 @@ func main() {
 					}
 				}
 			}
-		// case "PurchasingSourceListList":
-		// 	mas := &[]models.SapPurchasingSourceListListDatum{}
-		// 	json.Unmarshal(str, mas)
-		// 	for _, ma := range *mas {
-		// 		err = ma.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = ma.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
-		// case "PurchasingSourceListSupplier":
-		// 	mas := &[]models.SapPurchasingSourceListSupplierDatum{}
-		// 	json.Unmarshal(str, mas)
-		// 	for _, ma := range *mas {
-		// 		err = ma.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = ma.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
-		// case "PurchasingSourceListSupplyingPlant":
-		// 	mas := &[]models.SapPurchasingSourceListSupplyingPlantDatum{}
-		// 	json.Unmarshal(str, mas)
-		// 	for _, ma := range *mas {
-		// 		err = ma.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = ma.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
+		case "PurchasingSourceList":
+			mas := &[]models.SapPurchasingSourceListDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
 		case "PurchaseRequisitionHeader":
 			mas := &[]models.SapPurchaseRequisitionHeaderDatum{}
 			json.Unmarshal(str, mas)
@@ -1241,6 +1215,58 @@ func main() {
 					}
 				}
 			}
+		// case "SupplierInvoiceHeader":
+		// 	mas := &[]models.SapSupplierInvoiceHeaderDatum{}
+		// 	json.Unmarshal(str, mas)
+		// 	for _, ma := range *mas {
+		// 		err = ma.Insert(ctx, db, boil.Infer())
+		// 		if err != nil {
+		// 			l.Info("insert failed: %+v ; try update", err)
+		// 			_, err = ma.Update(ctx, db, boil.Infer())
+		// 			if err != nil {
+		// 				l.Error(err)
+		// 			}
+		// 		}
+		// 	}
+		// case "SupplierInvoiceTax":
+		// 	mas := &[]models.SapSupplierInvoiceTaxDatum{}
+		// 	json.Unmarshal(str, mas)
+		// 	for _, ma := range *mas {
+		// 		err = ma.Insert(ctx, db, boil.Infer())
+		// 		if err != nil {
+		// 			l.Info("insert failed: %+v ; try update", err)
+		// 			_, err = ma.Update(ctx, db, boil.Infer())
+		// 			if err != nil {
+		// 				l.Error(err)
+		// 			}
+		// 		}
+		// 	}
+		// case "SupplierInvoiceAccount":
+		// 	mas := &[]models.SapSupplierInvoiceAccountDatum{}
+		// 	json.Unmarshal(str, mas)
+		// 	for _, ma := range *mas {
+		// 		err = ma.Insert(ctx, db, boil.Infer())
+		// 		if err != nil {
+		// 			l.Info("insert failed: %+v ; try update", err)
+		// 			_, err = ma.Update(ctx, db, boil.Infer())
+		// 			if err != nil {
+		// 				l.Error(err)
+		// 			}
+		// 		}
+		// 	}
+		// case "SupplierInvoicePurchaseOrder":
+		// 	mas := &[]models.SapSupplierInvoicePurchaseOrderDatum{}
+		// 	json.Unmarshal(str, mas)
+		// 	for _, ma := range *mas {
+		// 		err = ma.Insert(ctx, db, boil.Infer())
+		// 		if err != nil {
+		// 			l.Info("insert failed: %+v ; try update", err)
+		// 			_, err = ma.Update(ctx, db, boil.Infer())
+		// 			if err != nil {
+		// 				l.Error(err)
+		// 			}
+		// 		}
+		// 	}
 		case "InboundDeliveryHeader":
 			mas := &[]models.SapInboundDeliveryHeaderDatum{}
 			json.Unmarshal(str, mas)
