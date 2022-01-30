@@ -764,84 +764,84 @@ func main() {
 					}
 				}
 			}
-		// case "CustomerReturnHeader":
-		// 	mas := &[]models.SapCustomerReturnHeaderDatum{}
-		// 	json.Unmarshal(str, mas)
-		// 	for _, ma := range *mas {
-		// 		err = ma.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = ma.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
-		// case "CustomerReturnHeaderPartner":
-		// 	mas := &[]models.SapCustomerReturnHeaderPartnerDatum{}
-		// 	json.Unmarshal(str, mas)
-		// 	for _, ma := range *mas {
-		// 		err = ma.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = ma.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
-		// case "CustomerReturnItem":
-		// 	mas := &[]models.SapCustomerReturnItemDatum{}
-		// 	json.Unmarshal(str, mas)
-		// 	for _, ma := range *mas {
-		// 		err = ma.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = ma.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
-		// case "CustomerReturnItemPricingElement":
-		// 	mas := &[]models.SapCustomerReturnItemPricingElementDatum{}
-		// 	json.Unmarshal(str, mas)
-		// 	for _, ma := range *mas {
-		// 		err = ma.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = ma.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
-		// case "CustomerReturnItemProcessStep":
-		// 	mas := &[]models.SapCustomerReturnItemProcessStepDatum{}
-		// 	json.Unmarshal(str, mas)
-		// 	for _, ma := range *mas {
-		// 		err = ma.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = ma.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
-		// case "CustomerReturnItemScheduleLine":
-		// 	mas := &[]models.SapCustomerReturnItemScheduleLineDatum{}
-		// 	json.Unmarshal(str, mas)
-		// 	for _, ma := range *mas {
-		// 		err = ma.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = ma.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
+		case "CustomerReturnHeader":
+			mas := &[]models.SapCustomerReturnHeaderDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "CustomerReturnHeaderPartner":
+			mas := &[]models.SapCustomerReturnHeaderPartnerDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "CustomerReturnItem":
+			mas := &[]models.SapCustomerReturnItemDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "CustomerReturnItemPricingElement":
+			mas := &[]models.SapCustomerReturnItemPricingElementDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "CustomerReturnItemProcessStep":
+			mas := &[]models.SapCustomerReturnItemProcessStepDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "CustomerReturnItemScheduleLine":
+			mas := &[]models.SapCustomerReturnItemScheduleLineDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
 		case "BillingDocumentHeader":
 			mas := &[]models.SapBillingDocumentHeaderDatum{}
 			json.Unmarshal(str, mas)

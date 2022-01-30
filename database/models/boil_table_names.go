@@ -28,6 +28,12 @@ var TableNames = struct {
 	SapCreditMemoRequestHeaderPartnerData                 string
 	SapCreditMemoRequestItemData                          string
 	SapCreditMemoRequestItemPricingElementData            string
+	SapCustomerReturnHeaderData                           string
+	SapCustomerReturnHeaderPartnerData                    string
+	SapCustomerReturnItemData                             string
+	SapCustomerReturnItemPricingElementData               string
+	SapCustomerReturnItemProcessStepData                  string
+	SapCustomerReturnItemScheduleLineData                 string
 	SapDefectHeaderData                                   string
 	SapEquipmentMasterBusinessPartnerData                 string
 	SapEquipmentMasterEquipmentData                       string
@@ -169,6 +175,12 @@ var TableNames = struct {
 	SapCreditMemoRequestHeaderPartnerData:                 "sap_credit_memo_request_header_partner_data",
 	SapCreditMemoRequestItemData:                          "sap_credit_memo_request_item_data",
 	SapCreditMemoRequestItemPricingElementData:            "sap_credit_memo_request_item_pricing_element_data",
+	SapCustomerReturnHeaderData:                           "sap_customer_return_header_data",
+	SapCustomerReturnHeaderPartnerData:                    "sap_customer_return_header_partner_data",
+	SapCustomerReturnItemData:                             "sap_customer_return_item_data",
+	SapCustomerReturnItemPricingElementData:               "sap_customer_return_item_pricing_element_data",
+	SapCustomerReturnItemProcessStepData:                  "sap_customer_return_item_process_step_data",
+	SapCustomerReturnItemScheduleLineData:                 "sap_customer_return_item_schedule_line_data",
 	SapDefectHeaderData:                                   "sap_defect_header_data",
 	SapEquipmentMasterBusinessPartnerData:                 "sap_equipment_master_business_partner_data",
 	SapEquipmentMasterEquipmentData:                       "sap_equipment_master_equipment_data",
