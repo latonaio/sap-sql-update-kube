@@ -7,6 +7,7 @@ var TableNames = struct {
 	SapBatchMasterRecord                                  string
 	SapBillOfMaterialHeaderData                           string
 	SapBillOfMaterialItemData                             string
+	SapBillOfMaterialWhereUsedListData                    string
 	SapBillingDocumentHeaderData                          string
 	SapBillingDocumentHeaderPartnerData                   string
 	SapBillingDocumentItemData                            string
@@ -34,6 +35,10 @@ var TableNames = struct {
 	SapCustomerReturnItemPricingElementData               string
 	SapCustomerReturnItemProcessStepData                  string
 	SapCustomerReturnItemScheduleLineData                 string
+	SapDebitMemoRequestHeaderData                         string
+	SapDebitMemoRequestHeaderPartnerData                  string
+	SapDebitMemoRequestItemData                           string
+	SapDebitMemoRequestItemPricingElementData             string
 	SapDefectHeaderData                                   string
 	SapEquipmentMasterBusinessPartnerData                 string
 	SapEquipmentMasterEquipmentData                       string
@@ -70,6 +75,10 @@ var TableNames = struct {
 	SapOutboundDeliveryItemData                           string
 	SapOutboundDeliveryItemDocumentFlowData               string
 	SapOutboundDeliveryPartnerAddressData                 string
+	SapPhysicalInventoryDocumentHeaderData                string
+	SapPhysicalInventoryDocumentItemData                  string
+	SapPlannedIndependentRequirementHeaderData            string
+	SapPlannedIndependentRequirementItemData              string
 	SapProcessOrderConfirmationBatchCharacteristicData    string
 	SapProcessOrderConfirmationConfirmationData           string
 	SapProcessOrderConfirmationMaterialMovementsData      string
@@ -110,6 +119,10 @@ var TableNames = struct {
 	SapPurchaseRequisitionItemAccountAssignmentData       string
 	SapPurchaseRequisitionItemData                        string
 	SapPurchaseRequisitionItemDeliveryAddressData         string
+	SapPurchasingInfoRecordGeneralData                    string
+	SapPurchasingInfoRecordOrganizationPlantData          string
+	SapPurchasingInfoRecordPricingConditionData           string
+	SapPurchasingInfoRecordPricingConditionValidityData   string
 	SapPurchasingSourceListData                           string
 	SapReservationDocumentHeaderData                      string
 	SapReservationDocumentItemData                        string
@@ -150,10 +163,15 @@ var TableNames = struct {
 	SapServiceOrderItemPricingElementData                 string
 	SapServiceOrderPersonResponsibleData                  string
 	SapServiceOrderReferenceObjectData                    string
+	SapSupplierInvoiceAccountAssignmentData               string
+	SapSupplierInvoiceHeaderData                          string
+	SapSupplierInvoicePurchaseOrderReferenceData          string
+	SapSupplierInvoiceTaxData                             string
 }{
 	SapBatchMasterRecord:                                  "sap_batch_master_record",
 	SapBillOfMaterialHeaderData:                           "sap_bill_of_material_header_data",
 	SapBillOfMaterialItemData:                             "sap_bill_of_material_item_data",
+	SapBillOfMaterialWhereUsedListData:                    "sap_bill_of_material_where_used_list_data",
 	SapBillingDocumentHeaderData:                          "sap_billing_document_header_data",
 	SapBillingDocumentHeaderPartnerData:                   "sap_billing_document_header_partner_data",
 	SapBillingDocumentItemData:                            "sap_billing_document_item_data",
@@ -181,6 +199,10 @@ var TableNames = struct {
 	SapCustomerReturnItemPricingElementData:               "sap_customer_return_item_pricing_element_data",
 	SapCustomerReturnItemProcessStepData:                  "sap_customer_return_item_process_step_data",
 	SapCustomerReturnItemScheduleLineData:                 "sap_customer_return_item_schedule_line_data",
+	SapDebitMemoRequestHeaderData:                         "sap_debit_memo_request_header_data",
+	SapDebitMemoRequestHeaderPartnerData:                  "sap_debit_memo_request_header_partner_data",
+	SapDebitMemoRequestItemData:                           "sap_debit_memo_request_item_data",
+	SapDebitMemoRequestItemPricingElementData:             "sap_debit_memo_request_item_pricing_element_data",
 	SapDefectHeaderData:                                   "sap_defect_header_data",
 	SapEquipmentMasterBusinessPartnerData:                 "sap_equipment_master_business_partner_data",
 	SapEquipmentMasterEquipmentData:                       "sap_equipment_master_equipment_data",
@@ -217,6 +239,10 @@ var TableNames = struct {
 	SapOutboundDeliveryItemData:                           "sap_outbound_delivery_item_data",
 	SapOutboundDeliveryItemDocumentFlowData:               "sap_outbound_delivery_item_document_flow_data",
 	SapOutboundDeliveryPartnerAddressData:                 "sap_outbound_delivery_partner_address_data",
+	SapPhysicalInventoryDocumentHeaderData:                "sap_physical_inventory_document_header_data",
+	SapPhysicalInventoryDocumentItemData:                  "sap_physical_inventory_document_item_data",
+	SapPlannedIndependentRequirementHeaderData:            "sap_planned_independent_requirement_header_data",
+	SapPlannedIndependentRequirementItemData:              "sap_planned_independent_requirement_item_data",
 	SapProcessOrderConfirmationBatchCharacteristicData:    "sap_process_order_confirmation_batch_characteristic_data",
 	SapProcessOrderConfirmationConfirmationData:           "sap_process_order_confirmation_confirmation_data",
 	SapProcessOrderConfirmationMaterialMovementsData:      "sap_process_order_confirmation_material_movements_data",
@@ -257,6 +283,10 @@ var TableNames = struct {
 	SapPurchaseRequisitionItemAccountAssignmentData:       "sap_purchase_requisition_item_account_assignment_data",
 	SapPurchaseRequisitionItemData:                        "sap_purchase_requisition_item_data",
 	SapPurchaseRequisitionItemDeliveryAddressData:         "sap_purchase_requisition_item_delivery_address_data",
+	SapPurchasingInfoRecordGeneralData:                    "sap_purchasing_info_record_general_data",
+	SapPurchasingInfoRecordOrganizationPlantData:          "sap_purchasing_info_record_organization_plant_data",
+	SapPurchasingInfoRecordPricingConditionData:           "sap_purchasing_info_record_pricing_condition_data",
+	SapPurchasingInfoRecordPricingConditionValidityData:   "sap_purchasing_info_record_pricing_condition_validity_data",
 	SapPurchasingSourceListData:                           "sap_purchasing_source_list_data",
 	SapReservationDocumentHeaderData:                      "sap_reservation_document_header_data",
 	SapReservationDocumentItemData:                        "sap_reservation_document_item_data",
@@ -297,4 +327,8 @@ var TableNames = struct {
 	SapServiceOrderItemPricingElementData:                 "sap_service_order_item_pricing_element_data",
 	SapServiceOrderPersonResponsibleData:                  "sap_service_order_person_responsible_data",
 	SapServiceOrderReferenceObjectData:                    "sap_service_order_reference_object_data",
+	SapSupplierInvoiceAccountAssignmentData:               "sap_supplier_invoice_account_assignment_data",
+	SapSupplierInvoiceHeaderData:                          "sap_supplier_invoice_header_data",
+	SapSupplierInvoicePurchaseOrderReferenceData:          "sap_supplier_invoice_purchase_order_reference_data",
+	SapSupplierInvoiceTaxData:                             "sap_supplier_invoice_tax_data",
 }

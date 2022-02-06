@@ -42,6 +42,12 @@ model_generate.sh のコマンドで、/database/models/ 内のソースコー�
 
 ### Central Functions ###
 
+#### Classification ####
+
+* [ClassificationCharacteristic](https://github.com/latonaio/sap-classification-sql/blob/main/sap-classification-sql-characteristic-data.sql)    
+* [ClassificationClass](https://github.com/latonaio/sap-classification-sql/blob/main/sap-classification-sql-class-data.sql)   
+* [ClassificationClassDescription](https://github.com/latonaio/sap-classification-sql/blob/main/sap-classification-sql-class-description-data.sql) 
+
 #### Business Partner ####
 
 * [BusinessPartnerGeneral](https://github.com/latonaio/sap-business-partner-sql/blob/main/sap-business-partner-sql-general-data.sql)
@@ -92,6 +98,11 @@ model_generate.sh のコマンドで、/database/models/ 内のソースコー�
 * [MaterialDocumentHeader](https://github.com/latonaio/sap-material-document-sql/blob/main/sap-material-document-sql-header-data.sql)
 * [MaterialDocumentItem](https://github.com/latonaio/sap-material-document-sql/blob/main/sap-material-document-sql-item-data.sql)
 
+#### Physical Inventory Document ####
+
+* [PhysicalInventoryDocumentHeader](https://github.com/latonaio/sap-physical-inventory-document-sql/blob/main/sap-physical-inventory-document-sql-header-data.sql)
+* [PhysicalInventoryDocumentItem](https://github.com/latonaio/sap-physical-inventory-document-sql/blob/main/sap-physical-inventory-document-sql-item-data.sql)
+
 ### Sales Management ###
 
 #### Customer Master ####
@@ -100,6 +111,10 @@ model_generate.sh のコマンドで、/database/models/ 内のソースコー�
 * [BusinessPartnerCustomerPartnerFunction](https://github.com/latonaio/sap-business-partner-sql/blob/main/sap-business-partner-sql-customer-partner-function-data.sql)
 * [BusinessPartnerCustomerSalesArea](https://github.com/latonaio/sap-business-partner-sql/blob/main/sap-business-partner-sql-customer-sales-area-data.sql)
 * [BusinessPartnerCustomerCompany](https://github.com/latonaio/sap-business-partner-sql/blob/main/sap-business-partner-sql-customer-company-data.sql)
+
+#### Customer Material ####
+
+* [CustomerMaterial](https://github.com/latonaio/sap-customer-material-sql/blob/main/sap-customer-material-sql.sql)
 
 #### Sales Pricing ####
 
@@ -145,10 +160,11 @@ model_generate.sh のコマンドで、/database/models/ 内のソースコー�
 * [SalesSchedulingAgreementItemScheduleLine](https://github.com/latonaio/sap-sales-scheduling-agreement-sql/blob/main/sap-sales-scheduling-agreement-sql-item-schedule-line-data.sql)  　　
 
 #### Supplier Invoice ####
+
 * [SupplierInvoiceHeader](https://github.com/latonaio/sap-supplier-invoice-sql/blob/main/sap-supplier-invoice-sql-header-data.sql)  
 * [SupplierInvoiceTax](https://github.com/latonaio/sap-supplier-invoice-sql/blob/main/sap-supplier-invoice-sql-tax-data.sql)  
 * [SupplierInvoiceAccountAssignment](https://github.com/latonaio/sap-supplier-invoice-sql/blob/main/sap-supplier-invoice-sql-account-assignment-data.sql)  
-* [SupplierInvoicePurchaeseOrderReference](https://github.com/latonaio/sap-supplier-invoice-sql/blob/main/sap-supplier-invoice-sql-purchaese-order-reference-data.sql)
+* [SupplierInvoicePurchaseOrderReference](https://github.com/latonaio/sap-supplier-invoice-sql/blob/main/sap-supplier-invoice-sql-purchase-order-reference-data.sql)
 
 #### Outbound Delivery ####
 
@@ -182,13 +198,24 @@ model_generate.sh のコマンドで、/database/models/ 内のソースコー�
 * [CreditMemoRequestItem](https://github.com/latonaio/sap-credit-memo-request-sql/blob/main/sap-credit-memo-request-sql-item-data.sql)
 * [CreditMemoRequestItemPricingElement](https://github.com/latonaio/sap-credit-memo-request-sql/blob/main/sap-credit-memo-request-sql-item-pricing-element-data.sql)
 
+#### Debit Memo Request ####
+
+* [DebitMemoRequestHeader](https://github.com/latonaio/sap-debit-memo-request-sql/blob/main/sap-debit-memo-request-sql-header-data.sql)  
+* [DebitMemoRequestHeaderPartner](https://github.com/latonaio/sap-debit-memo-request-sql/blob/main/sap-debit-memo-request-sql-header-partner-data.sql)    
+* [DebitMemoRequestItem](https://github.com/latonaio/sap-debit-memo-request-sql/blob/main/sap-debit-memo-request-sql-item-data.sql)    
+* [DebitMemoRequestItemPricingElement](https://github.com/latonaio/sap-debit-memo-request-sql/blob/main/sap-debit-memo-request-sql-item-pricing-element-data.sql)   
+
 ### Production Management
 
 #### Bill Of Material ####
 
 * [BillOfMaterialHeader](https://github.com/latonaio/sap-bill-of-material-sql/blob/main/sap-bill-of-material-sql-header-data.sql)
 * [BillOfMaterialItem](https://github.com/latonaio/sap-bill-of-material-sql/blob/main/sap-bill-of-material-sql-item-data.sql)
+  
+#### Bill Of Material Where Used List 
 
+* [BillOfMaterialWhereUsedList](https://github.com/latonaio/sap-bill-of-material-where-used-list-sql/blob/main/sap-bill-of-material-where-used-list.sql)
+  
 #### Production Routing ####
 
 * [ProductionRoutingHeader](https://github.com/latonaio/sap-production-routing-sql/blob/main/sap-production-routing-sql-header-data.sql)
@@ -196,6 +223,11 @@ model_generate.sh のコマンドで、/database/models/ 内のソースコー�
 * [ProductionRoutingSequence](https://github.com/latonaio/sap-production-routing-sql/blob/main/sap-production-routing-sql-sequence-data.sql)
 * [ProductionRoutingOperation](https://github.com/latonaio/sap-production-routing-sql/blob/main/sap-production-routing-sql-operation-data.sql)
 * [ProductionRoutingComponentAllocation](https://github.com/latonaio/sap-production-routing-sql/blob/main/sap-production-routing-sql-component-allocation-data.sql)
+
+#### Planned Independent Requirement ####
+
+* [PlannedIndependentRequirementHeader](https://github.com/latonaio/sap-planned-independent-requirement-sql/blob/main/sap-planned-independent-requirement-sql-header-data.sql)
+* [PlannedIndependentRequirementItem](https://github.com/latonaio/sap-planned-independent-requirement-sql/blob/main/sap-planned-independent-requirement-sql-item-data.sql)
 
 #### Production Order ####
 
@@ -226,9 +258,17 @@ model_generate.sh のコマンドで、/database/models/ 内のソースコー�
 * [BusinessPartnerSupplierCompany](https://github.com/latonaio/sap-business-partner-sql/blob/main/sap-business-partner-sql-supplier-company-data.sql)
 * [BusinessPartnerSupplierPurchasingOrganization](https://github.com/latonaio/sap-business-partner-sql/blob/main/sap-business-partner-sql-supplier-purchasing-organization-data.sql)
 
-#### Purchasing Source List #### 
+#### Purchasing Source List
 
 * [PurchasingSourceList](https://github.com/latonaio/sap-purchasing-source-list-sql/blob/main/sap-purchasing-source-list.sql)
+
+#### Purchasing Info Record ####
+
+* [PurchasingInfoRecordPurchasingOrganizationPlant](https://github.com/latonaio/sap-purchasing-info-record-sql/blob/main/sap-purchasing-info-record-purchasing-organization-plant-data.sql)  
+* [PurchasingInfoRecordGeneral](https://github.com/latonaio/sap-purchasing-info-record-sql/blob/main/sap-purchasing-info-record-sql-general-data.sql)  
+* [PurchasingInfoRecordPricingCondition](https://github.com/latonaio/sap-purchasing-info-record-sql/blob/main/sap-purchasing-info-record-sql-pricing-condition-data.sql)  
+* [PurchasingInfoRecordPricingConditionValidity](https://github.com/latonaio/sap-purchasing-info-record-sql/blob/main/sap-purchasing-info-record-sql-pricing-condition-validity-data.sql)
+
 
 #### Purchase Requisition ####
 
