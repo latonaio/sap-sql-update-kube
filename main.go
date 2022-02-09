@@ -42,45 +42,97 @@ func main() {
 		msg.Success()
 
 		switch f {
-		// case "ClassClass":
-		// 	pms := &[]models.SapClassClassDatum{}
-		// 	json.Unmarshal(str, pms)
-		// 	for _, pm := range *pms {
-		// 		err = pm.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = pm.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
-		// case "ClassCharc":
-		// 	pms := &[]models.SapClassCharcDatum{}
-		// 	json.Unmarshal(str, pms)
-		// 	for _, pm := range *pms {
-		// 		err = pm.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = pm.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
-		// case "ClassClassDescription":
-		// 	pms := &[]models.SapClassClassDescriptionDatum{}
-		// 	json.Unmarshal(str, pms)
-		// 	for _, pm := range *pms {
-		// 		err = pm.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = pm.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
+		case "ClassificationClass":
+			pms := &[]models.SapClassificationClassDatum{}
+			json.Unmarshal(str, pms)
+			for _, pm := range *pms {
+				err = pm.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = pm.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "ClassificationCharacteristic":
+			pms := &[]models.SapClassificationCharacteristicDatum{}
+			json.Unmarshal(str, pms)
+			for _, pm := range *pms {
+				err = pm.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = pm.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "ClassificationClassDescription":
+			pms := &[]models.SapClassificationClassDescriptionDatum{}
+			json.Unmarshal(str, pms)
+			for _, pm := range *pms {
+				err = pm.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = pm.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "CharacteristicCharacteristic":
+			pms := &[]models.SapCharacteristicCharacteristicDatum{}
+			json.Unmarshal(str, pms)
+			for _, pm := range *pms {
+				err = pm.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = pm.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "CharacteristicValue":
+			pms := &[]models.SapCharacteristicValueDatum{}
+			json.Unmarshal(str, pms)
+			for _, pm := range *pms {
+				err = pm.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = pm.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "CharacteristicCharcDescription":
+			pms := &[]models.SapCharacteristicCharcDescriptionDatum{}
+			json.Unmarshal(str, pms)
+			for _, pm := range *pms {
+				err = pm.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = pm.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "CharacteristicValueDescription":
+			pms := &[]models.SapCharacteristicValueDescriptionDatum{}
+			json.Unmarshal(str, pms)
+			for _, pm := range *pms {
+				err = pm.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = pm.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
 		case "BusinessPartnerGeneral":
 			pms := &[]models.SapBusinessPartnerGeneralDatum{}
 			json.Unmarshal(str, pms)

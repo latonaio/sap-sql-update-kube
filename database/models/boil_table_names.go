@@ -25,6 +25,13 @@ var TableNames = struct {
 	SapBusinessPartnerSupplierData                        string
 	SapBusinessPartnerSupplierPartnerFunctionData         string
 	SapBusinessPartnerSupplierPurchasingOrganizationData  string
+	SapCharacteristicCharacteristicData                   string
+	SapCharacteristicCharcDescriptionData                 string
+	SapCharacteristicValueData                            string
+	SapCharacteristicValueDescriptionData                 string
+	SapClassificationCharacteristicData                   string
+	SapClassificationClassData                            string
+	SapClassificationClassDescriptionData                 string
 	SapCreditMemoRequestHeaderData                        string
 	SapCreditMemoRequestHeaderPartnerData                 string
 	SapCreditMemoRequestItemData                          string
@@ -189,6 +196,13 @@ var TableNames = struct {
 	SapBusinessPartnerSupplierData:                        "sap_business_partner_supplier_data",
 	SapBusinessPartnerSupplierPartnerFunctionData:         "sap_business_partner_supplier_partner_function_data",
 	SapBusinessPartnerSupplierPurchasingOrganizationData:  "sap_business_partner_supplier_purchasing_organization_data",
+	SapCharacteristicCharacteristicData:                   "sap_characteristic_characteristic_data",
+	SapCharacteristicCharcDescriptionData:                 "sap_characteristic_charc_description_data",
+	SapCharacteristicValueData:                            "sap_characteristic_value_data",
+	SapCharacteristicValueDescriptionData:                 "sap_characteristic_value_description_data",
+	SapClassificationCharacteristicData:                   "sap_classification_characteristic_data",
+	SapClassificationClassData:                            "sap_classification_class_data",
+	SapClassificationClassDescriptionData:                 "sap_classification_class_description_data",
 	SapCreditMemoRequestHeaderData:                        "sap_credit_memo_request_header_data",
 	SapCreditMemoRequestHeaderPartnerData:                 "sap_credit_memo_request_header_partner_data",
 	SapCreditMemoRequestItemData:                          "sap_credit_memo_request_item_data",

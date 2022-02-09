@@ -48,6 +48,13 @@ model_generate.sh のコマンドで、/database/models/ 内のソースコー�
 * [ClassificationClass](https://github.com/latonaio/sap-classification-sql/blob/main/sap-classification-sql-class-data.sql)   
 * [ClassificationClassDescription](https://github.com/latonaio/sap-classification-sql/blob/main/sap-classification-sql-class-description-data.sql) 
 
+#### Characteristic ####
+
+* [CharacteristicCharacteristic](https://github.com/latonaio/sap-characteristic-sql/blob/main/sap-characteristic-sql-characteristic-data.sql) 
+* [CharacteristicValue](https://github.com/latonaio/sap-characteristic-sql/blob/main/sap-characteristic-sql-value-data.sql)   
+* [CharacteristicCharcDescription](https://github.com/latonaio/sap-characteristic-sql/blob/main/sap-characteristic-sql-charc-description-data.sql)   
+* [CharacteristicValueDescription](https://github.com/latonaio/sap-characteristic-sql/blob/main/sap-characteristic-sql-value-description-data.sql)   
+
 #### Business Partner ####
 
 * [BusinessPartnerGeneral](https://github.com/latonaio/sap-business-partner-sql/blob/main/sap-business-partner-sql-general-data.sql)
