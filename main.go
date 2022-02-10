@@ -495,19 +495,19 @@ func main() {
 					}
 				}
 			}
-		// case "CustomerMaterialCustomerMaterial":
-		// 	mas := &[]models.SapCustomerMaterialCustomerMaterialDatum{}
-		// 	json.Unmarshal(str, mas)
-		// 	for _, ma := range *mas {
-		// 		err = ma.Insert(ctx, db, boil.Infer())
-		// 		if err != nil {
-		// 			l.Info("insert failed: %+v ; try update", err)
-		// 			_, err = ma.Update(ctx, db, boil.Infer())
-		// 			if err != nil {
-		// 				l.Error(err)
-		// 			}
-		// 		}
-		// 	}
+		case "CustomerMaterial":
+			mas := &[]models.SapCustomerMaterialDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
 		case "SalesPricingConditionValidity":
 			mas := &[]models.SapSalesPricingConditionValidityDatum{}
 			json.Unmarshal(str, mas)

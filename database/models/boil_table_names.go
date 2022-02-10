@@ -36,6 +36,7 @@ var TableNames = struct {
 	SapCreditMemoRequestHeaderPartnerData                 string
 	SapCreditMemoRequestItemData                          string
 	SapCreditMemoRequestItemPricingElementData            string
+	SapCustomerMaterialData                               string
 	SapCustomerReturnHeaderData                           string
 	SapCustomerReturnHeaderPartnerData                    string
 	SapCustomerReturnItemData                             string
@@ -207,6 +208,7 @@ var TableNames = struct {
 	SapCreditMemoRequestHeaderPartnerData:                 "sap_credit_memo_request_header_partner_data",
 	SapCreditMemoRequestItemData:                          "sap_credit_memo_request_item_data",
 	SapCreditMemoRequestItemPricingElementData:            "sap_credit_memo_request_item_pricing_element_data",
+	SapCustomerMaterialData:                               "sap_customer_material_data",
 	SapCustomerReturnHeaderData:                           "sap_customer_return_header_data",
 	SapCustomerReturnHeaderPartnerData:                    "sap_customer_return_header_partner_data",
 	SapCustomerReturnItemData:                             "sap_customer_return_item_data",

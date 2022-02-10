@@ -33,7 +33,7 @@ model_generate.sh の 対象データベース接続時の情報は、/database/
 sap-sql-update-kube には、ソースコードの初期値として、下記のSAP SQL テーブルを対象として生成されたソースコード群が、/database/models/ 内に含まれています。  
 
 ## SQLBoiler のバージョン
-本レポジトリは、[SQLBoiler](https://github.com/volatiletech/sqlboiler) 4.8.4 のバージョンを使用しています。  
+本レポジトリは、[SQLBoiler](https://github.com/volatiletech/sqlboiler) 4.8.6 のバージョンを使用しています。  
 model_generate.sh のコマンドで、/database/models/ 内のソースコードを生成すると、当該ソースコード内の SQLBoiler のバージョンが最新になるのでご注意ください。      
 バージョンを最新にした際は、併せて go modのバージョンを更新し、go mod tidy を行なってください。  
 
