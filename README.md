@@ -55,6 +55,9 @@ model_generate.sh のコマンドで、/database/models/ 内のソースコー�
 * [CharacteristicCharcDescription](https://github.com/latonaio/sap-characteristic-sql/blob/main/sap-characteristic-sql-charc-description-data.sql)   
 * [CharacteristicValueDescription](https://github.com/latonaio/sap-characteristic-sql/blob/main/sap-characteristic-sql-value-description-data.sql)   
 
+#### Bank Master ####
+
+* [BankMasterBank](https://github.com/latonaio/sap-bank-master-sql/blob/main/sap-bank-master-sql-bank-data.sql)
 #### Business Partner ####
 
 * [BusinessPartnerGeneral](https://github.com/latonaio/sap-business-partner-sql/blob/main/sap-business-partner-sql-general-data.sql)
