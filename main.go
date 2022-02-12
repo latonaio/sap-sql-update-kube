@@ -133,6 +133,19 @@ func main() {
 					}
 				}
 			}
+		case "BankMasterBank":
+			pms := &[]models.SapBankMasterBankDatum{}
+			json.Unmarshal(str, pms)
+			for _, pm := range *pms {
+				err = pm.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = pm.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
 		case "BusinessPartnerGeneral":
 			pms := &[]models.SapBusinessPartnerGeneralDatum{}
 			json.Unmarshal(str, pms)
@@ -1553,6 +1566,19 @@ func main() {
 			}
 		case "BillOfMaterialWhereUsedList":
 			mas := &[]models.SapBillOfMaterialWhereUsedListDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "WorkCenter":
+			mas := &[]models.SapWorkCenterDatum{}
 			json.Unmarshal(str, mas)
 			for _, ma := range *mas {
 				err = ma.Insert(ctx, db, boil.Infer())

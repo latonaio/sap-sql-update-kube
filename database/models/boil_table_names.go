@@ -4,6 +4,7 @@
 package models
 
 var TableNames = struct {
+	SapBankMasterBankData                                 string
 	SapBatchMasterRecord                                  string
 	SapBillOfMaterialHeaderData                           string
 	SapBillOfMaterialItemData                             string
@@ -175,7 +176,9 @@ var TableNames = struct {
 	SapSupplierInvoiceHeaderData                          string
 	SapSupplierInvoicePurchaseOrderReferenceData          string
 	SapSupplierInvoiceTaxData                             string
+	SapWorkCenterData                                     string
 }{
+	SapBankMasterBankData:                                 "sap_bank_master_bank_data",
 	SapBatchMasterRecord:                                  "sap_batch_master_record",
 	SapBillOfMaterialHeaderData:                           "sap_bill_of_material_header_data",
 	SapBillOfMaterialItemData:                             "sap_bill_of_material_item_data",
@@ -347,4 +350,5 @@ var TableNames = struct {
 	SapSupplierInvoiceHeaderData:                          "sap_supplier_invoice_header_data",
 	SapSupplierInvoicePurchaseOrderReferenceData:          "sap_supplier_invoice_purchase_order_reference_data",
 	SapSupplierInvoiceTaxData:                             "sap_supplier_invoice_tax_data",
+	SapWorkCenterData:                                     "sap_work_center_data",
 }

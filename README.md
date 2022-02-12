@@ -225,7 +225,11 @@ model_generate.sh のコマンドで、/database/models/ 内のソースコー�
 #### Bill Of Material Where Used List 
 
 * [BillOfMaterialWhereUsedList](https://github.com/latonaio/sap-bill-of-material-where-used-list-sql/blob/main/sap-bill-of-material-where-used-list.sql)
-  
+
+####  Work Center
+
+* [WorkCenter](https://github.com/latonaio/sap-work-center-sql/blob/main/sap-work-center-sql.sql)
+
 #### Production Routing ####
 
 * [ProductionRoutingHeader](https://github.com/latonaio/sap-production-routing-sql/blob/main/sap-production-routing-sql-header-data.sql)
