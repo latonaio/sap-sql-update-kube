@@ -1681,6 +1681,32 @@ func main() {
 					}
 				}
 			}
+		case "PlannedOrderHeader":
+			mas := &[]models.SapPlannedOrderHeaderDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "PlannedOrderComponent":
+			mas := &[]models.SapPlannedOrderComponentDatum{}
+			json.Unmarshal(str, mas)
+			for _, ma := range *mas {
+				err = ma.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = ma.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
 		case "ProductionOrderGeneral":
 			mas := &[]models.SapProductionOrderGeneralDatum{}
 			json.Unmarshal(str, mas)

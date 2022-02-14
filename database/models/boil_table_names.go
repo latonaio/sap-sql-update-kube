@@ -88,6 +88,8 @@ var TableNames = struct {
 	SapPhysicalInventoryDocumentItemData                  string
 	SapPlannedIndependentRequirementHeaderData            string
 	SapPlannedIndependentRequirementItemData              string
+	SapPlannedOrderComponentData                          string
+	SapPlannedOrderHeaderData                             string
 	SapProcessOrderConfirmationBatchCharacteristicData    string
 	SapProcessOrderConfirmationConfirmationData           string
 	SapProcessOrderConfirmationMaterialMovementsData      string
@@ -262,6 +264,8 @@ var TableNames = struct {
 	SapPhysicalInventoryDocumentItemData:                  "sap_physical_inventory_document_item_data",
 	SapPlannedIndependentRequirementHeaderData:            "sap_planned_independent_requirement_header_data",
 	SapPlannedIndependentRequirementItemData:              "sap_planned_independent_requirement_item_data",
+	SapPlannedOrderComponentData:                          "sap_planned_order_component_data",
+	SapPlannedOrderHeaderData:                             "sap_planned_order_header_data",
 	SapProcessOrderConfirmationBatchCharacteristicData:    "sap_process_order_confirmation_batch_characteristic_data",
 	SapProcessOrderConfirmationConfirmationData:           "sap_process_order_confirmation_confirmation_data",
 	SapProcessOrderConfirmationMaterialMovementsData:      "sap_process_order_confirmation_material_movements_data",

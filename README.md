@@ -243,6 +243,12 @@ model_generate.sh のコマンドで、/database/models/ 内のソースコー�
 * [PlannedIndependentRequirementHeader](https://github.com/latonaio/sap-planned-independent-requirement-sql/blob/main/sap-planned-independent-requirement-sql-header-data.sql)
 * [PlannedIndependentRequirementItem](https://github.com/latonaio/sap-planned-independent-requirement-sql/blob/main/sap-planned-independent-requirement-sql-item-data.sql)
 
+
+#### Planned Order ####
+
+* [PlannedOrderHeader](https://github.com/latonaio/sap-planned-order-sql/blob/main/sap-planned-order-sql-header-data.sql)
+* [PlannedOrderComponent](https://github.com/latonaio/sap-planned-order-sql/blob/main/sap-planned-order-sql-component-data.sql)
+
 #### Production Order ####
 
 * [ProductionOrderGeneral](https://github.com/latonaio/sap-production-order-sql/blob/main/sap-production-order-sql-general-data.sql)
