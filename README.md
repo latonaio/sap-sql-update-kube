@@ -81,6 +81,13 @@ model_generate.sh のコマンドで、/database/models/ 内のソースコー�
 * [ProductMasterQuality](https://github.com/latonaio/sap-product-master-sql/blob/main/sap_product_master_sql_quality_data.sql)
 * [ProductMasterProductDesc](https://github.com/latonaio/sap-product-master-sql/blob/main/sap_product_master_sql_product_description_data.sql)
 
+#### Product Master Class ####
+
+* [ProductMasterClassGeneral](https://github.com/latonaio/sap-product-master-class-sql/blob/main/sap-product-master-class-sql-product-general-data.sql)  
+* [ProductMasterCloassProductClass](https://github.com/latonaio/sap-product-master-class-sql/blob/main/sap-product-master-class-sql-product-class-data.sql)  
+* [ProductMasterClassClassDetails](https://github.com/latonaio/sap-product-master-class-sql/blob/main/sap-product-master-class-sql-class-details-data.sql)
+* [ProductMasterClassProductCharacteristic](https://github.com/latonaio/sap-product-master-class-sql/blob/main/sap-product-master-class-sql-product-characteristic-data.sql)
+
 #### Batch Master Record ####
 
 * [BatchMasterRecord](https://github.com/latonaio/sap-batch-master-record-sql/blob/main/sap-batch-master-record.sql)

@@ -341,6 +341,58 @@ func main() {
 					}
 				}
 			}
+		case "ProductMasterClassProductGeneral":
+			pds := &[]models.SapProductMasterClassProductGeneralDatum{}
+			json.Unmarshal(str, pds)
+			for _, pd := range *pds {
+				err = pd.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = pd.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "ProductMasterCloassProductClass":
+			pds := &[]models.SapProductMasterClassProductClassDatum{}
+			json.Unmarshal(str, pds)
+			for _, pd := range *pds {
+				err = pd.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = pd.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "ProductMasterClassClassDetails":
+			pds := &[]models.SapProductMasterClassClassDetailsDatum{}
+			json.Unmarshal(str, pds)
+			for _, pd := range *pds {
+				err = pd.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = pd.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
+		case "ProductMasterClassProductCharacteristic":
+			pds := &[]models.SapProductMasterClassProductCharacteristicDatum{}
+			json.Unmarshal(str, pds)
+			for _, pd := range *pds {
+				err = pd.Insert(ctx, db, boil.Infer())
+				if err != nil {
+					l.Info("insert failed: %+v ; try update", err)
+					_, err = pd.Update(ctx, db, boil.Infer())
+					if err != nil {
+						l.Error(err)
+					}
+				}
+			}
 		case "Batch":
 			mas := &[]models.SapBatchMasterRecord{}
 			json.Unmarshal(str, mas)

@@ -94,6 +94,10 @@ var TableNames = struct {
 	SapProcessOrderConfirmationConfirmationData           string
 	SapProcessOrderConfirmationMaterialMovementsData      string
 	SapProductMasterAccountingData                        string
+	SapProductMasterClassClassDetailsData                 string
+	SapProductMasterClassProductCharacteristicData        string
+	SapProductMasterClassProductClassData                 string
+	SapProductMasterClassProductGeneralData               string
 	SapProductMasterGeneralData                           string
 	SapProductMasterMRPAreaData                           string
 	SapProductMasterPlantData                             string
@@ -270,6 +274,10 @@ var TableNames = struct {
 	SapProcessOrderConfirmationConfirmationData:           "sap_process_order_confirmation_confirmation_data",
 	SapProcessOrderConfirmationMaterialMovementsData:      "sap_process_order_confirmation_material_movements_data",
 	SapProductMasterAccountingData:                        "sap_product_master_accounting_data",
+	SapProductMasterClassClassDetailsData:                 "sap_product_master_class_class_details_data",
+	SapProductMasterClassProductCharacteristicData:        "sap_product_master_class_product_characteristic_data",
+	SapProductMasterClassProductClassData:                 "sap_product_master_class_product_class_data",
+	SapProductMasterClassProductGeneralData:               "sap_product_master_class_product_general_data",
 	SapProductMasterGeneralData:                           "sap_product_master_general_data",
 	SapProductMasterMRPAreaData:                           "sap_product_master_mrp_area_data",
 	SapProductMasterPlantData:                             "sap_product_master_plant_data",
