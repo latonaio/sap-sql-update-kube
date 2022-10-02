@@ -14,6 +14,7 @@ spec:
       labels:
         run: sap-sql-update-kube
     spec:
+      nodeName: mysql-data
       hostname: sap-sql-update-kube
       containers:
         - name: sap-sql-update-kube
@@ -26,31 +27,29 @@ spec:
               mountPath: /var/lib/aion/UI/sap-sql-update-kube/public/
           env:
             - name: RMQ_USER
-              value: "guest"
+              value: "XXXXXXXXXX"
             - name: RMQ_PASS
-              value: "XXXXXXXX"
+              value: "XXXXXXXXXX"
             - name: RMQ_ADDRESS
-              value: "192.168.128.135"
+              value: "rabbitmq"
             - name: RMQ_PORT
-              value: "32094"
+              value: "5672"
             - name: RMQ_VHOST
-              value: "sap-test"
+              value: "sap"
             - name: RMQ_QUEUE_FROM
               value: "sap-sql-update-kube"
             - name: RMQ_QUEUE_TO
               value: ""
-            - name: SAP_API_BASE_URL
-              value: "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/"
             - name: DB_USER
-              value: "latona"
+              value: "XXXXXXXXXX"
             - name: DB_NAME
-              value: "sap"
+              value: "DataPlatformApiRequestToRmqMapperSQL"
             - name: DB_PASS
-              value: "XXXXXXXXXXXX"
+              value: "XXXXXXXXXX"
             - name: DB_ADDRESS
-              value: "192.168.128.135"
+              value: "data-platform-masters-and-transactions-mysql-kube"
             - name: DB_PORT
-              value: "30000"
+              value: "3306"
           resources:
             limits:
               cpu: "1"

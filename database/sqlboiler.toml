@@ -3,9 +3,9 @@ output = "models"
 wipe = false
 
 [mysql]
-dbname = "sap"
-host = "192.168.128.135"
-pass = "XXXXXXXXXXX"
-port = 30000
+dbname = "DataPlatformMastersAndTransactionsMysqlKube"
+host = "XXXXXXXXXX"
+port = 30010
+user = "XXXXXXXXXX"
+pass = "XXXXXXXXXX"
 sslmode = "false"
-user = "latona"
