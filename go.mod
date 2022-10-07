@@ -8,7 +8,7 @@ require (
 	github.com/latonaio/golang-logging-library v1.0.8
 	github.com/latonaio/rabbitmq-golang-client v1.0.2
 	github.com/volatiletech/null/v8 v8.1.2
-	github.com/volatiletech/sqlboiler/v4 v4.11.0
+	github.com/volatiletech/sqlboiler/v4 v4.13.0
 	github.com/volatiletech/strmangle v0.0.4
 	golang.org/x/xerrors v0.0.0-20220411194840-2f41105eb62f
 )

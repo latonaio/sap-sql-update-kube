@@ -19,7 +19,7 @@ spec:
       containers:
         - name: sap-sql-update-kube
           image: latonaio/sap-sql-update-kube
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           volumeMounts:
             - name: data
               mountPath: /var/lib/aion/Data
@@ -27,9 +27,9 @@ spec:
               mountPath: /var/lib/aion/UI/sap-sql-update-kube/public/
           env:
             - name: RMQ_USER
-              value: "XXXXXXXXXX"
+              value: "XXXXXXXXX"
             - name: RMQ_PASS
-              value: "XXXXXXXXXX"
+              value: "XXXXXXXXX"
             - name: RMQ_ADDRESS
               value: "rabbitmq"
             - name: RMQ_PORT
@@ -39,13 +39,13 @@ spec:
             - name: RMQ_QUEUE_FROM
               value: "sap-sql-update-kube"
             - name: RMQ_QUEUE_TO
-              value: ""
+              value: "sap-sql-update-kube"
             - name: DB_USER
-              value: "XXXXXXXXXX"
+              value: "latona"
             - name: DB_NAME
-              value: "DataPlatformApiRequestToRmqMapperSQL"
+              value: "DataPlatformMastersAndTransactionsMysqlKube"
             - name: DB_PASS
-              value: "XXXXXXXXXX"
+              value: "XXXXXXXXX"
             - name: DB_ADDRESS
               value: "data-platform-masters-and-transactions-mysql-kube"
             - name: DB_PORT
@@ -58,12 +58,12 @@ spec:
               cpu: "0.5"
               memory: "100Mi"
       volumes:
-      - name: data
-        hostPath:
-          path: /var/lib/aion/default/Data
-      - name: ui
-        hostPath:
-          path: /var/lib/aion/UI/sap-sql-update-kube/public/
+        - name: data
+          hostPath:
+            path: /var/lib/aion/default/Data
+        - name: ui
+          hostPath:
+            path: /var/lib/aion/UI/sap-sql-update-kube/public/
 ---
 apiVersion: v1
 kind: Service
@@ -80,3 +80,4 @@ spec:
       port: 40101
       protocol: TCP
       targetPort: 12345
+

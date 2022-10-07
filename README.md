@@ -32,6 +32,23 @@ model_generate.sh の 対象データベース接続時の情報は、/database/
 
 sap-sql-update-kube には、ソースコードの初期値として、下記のSAP SQL テーブルを対象として生成されたソースコード群が、/database/models/ 内に含まれています。  
 
+## SQLデータベースの複数外部キーへの対応
+sap-sql-update-kube は、SQLデータベースからのソースコードの生成において、複数外部キーのテーブルに対応しています。
+例えば、以下のテーブルでは、Product、Plant の二つを外部キーとして、SQLデータベース、テーブルを読み込み、当該SQLデータベース、テーブルの登録更新モジュールとして必要なソースコードが、/database/models/ 内に自動生成されます。
+
+```
+CREATE TABLE `sap_product_master_sales_plant_data`
+(
+    `Product`                 varchar(40) NOT NULL,
+    `Plant`                   varchar(4) NOT NULL,
+    `LoadingGroup`            varchar(4) DEFAULT NULL,
+    `AvailabilityCheckType`   varchar(2) DEFAULT NULL,
+    PRIMARY KEY (`Product`, `Plant`),
+    CONSTRAINT `SAPProductMasterSalesPlantData_fk` FOREIGN KEY (`Product`, `Plant`) REFERENCES `sap_product_master_plant_data` (`Product`, `Plant`)
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4;
+```
+
 ## SQLBoiler のバージョン
 本レポジトリは、[SQLBoiler](https://github.com/volatiletech/sqlboiler) 4.8.6 のバージョンを使用しています。  
 model_generate.sh のコマンドで、/database/models/ 内のソースコードを生成すると、当該ソースコード内の SQLBoiler のバージョンが最新になるのでご注意ください。      
